@@ -1,0 +1,1011 @@
+Variables y operaciones
+1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+
+    ¿Qué es una variable y para qué sirve?
+    En programación y matemáticas, una variable es un símbolo que representa 
+    un valor o una cantidad que puede cambiar en el contexto de una función, 
+    ecuación o programa. Sirve para almacenar y manipular datos, permitiendo 
+    que estos valores cambien durante la ejecución de un programa o en el 
+    desarrollo de cálculos matemáticos. Las variables son fundamentales para la 
+    flexibilidad y dinamismo en la escritura de código y la resolución de problemas. 
+
+    ¿Cuál es la diferencia entre declarar e inicializar una variable?
+    Declarar una variable: Este es el paso en el cual defines el nombre y el tipo de
+    dato de una variable, reservando un espacio en la memoria para almacenar información.
+    La declaración establece la existencia de la variable, pero no asigna un valor específico.
+
+    Inicializar una variable: Este paso ocurre después de la declaración y consiste en asignar 
+    un valor específico a la variable. La inicialización le da un contenido concreto al espacio 
+    de memoria reservado durante la declaración.
+
+    ¿Cuál es la diferencia entre sumar números y concatenar strings?
+    La diferencia fundamental entre sumar números y concatenar strings radica en el tipo de operación
+    que se está realizando y en el resultado esperado.
+
+    Sumar números:
+    Cuando sumas números, estás realizando una operación aritmética en la que se lleva a cabo la adición
+    matemática. El resultado será la suma de los valores numéricos.
+    Concatenar strings:
+
+    La concatenación de strings 
+    implica unir dos o más cadenas de texto para formar una cadena más larga.
+    En lugar de realizar una operación aritmética, se realiza una operación de combinación de texto.
+    
+    ¿Cuál operador me permite sumar o concatenar?
+    El operador que te permite realizar tanto la suma de números como la concatenación de strings depende
+    del contexto en el que estés utilizando el operador. En muchos lenguajes de programación, el operador 
+    + se utiliza para ambas operaciones, pero su comportamiento varía según los tipos de datos involucrados.
+    
+    Suma de números:
+    Cuando utilizas el operador + con números, realiza la operación de suma matemática.
+    Concatenación de strings:
+
+    Cuando utilizas el operador + con strings, realiza la operación de concatenación.
+    
+    python
+    
+    cadena1 = "Hola, "
+    cadena2 = "mundo!"
+    resultado_concatenacion = cadena1 + cadena2   
+
+2️⃣ Determina el nombre y tipo de dato para almacenar en variables la siguiente información:
+
+    Nombre "string"
+    Apellido "string"
+    Nombre de usuario en Platzi "string"
+    Edad "number"
+    Correo electrónico "string"
+    Mayor de edad "boolean"
+    Dinero ahorrado "number"
+    Deudas "number"
+
+3️⃣ Traduce a código JavaScript las variables del ejemplo anterior y deja tu código en los comentarios.
+    // Declaración de variables
+    let nombre = "String";
+    let apellido = "String";
+    let nombreUsuarioPlatzi = "String";
+    let edad = Number; // Aquí deberías asignar un valor numérico específico
+    let correoElectronico = "String";
+    let mayorDeEdad = Boolean; // Aquí deberías asignar un valor booleano específico
+    let dineroAhorrado = Number; // Aquí deberías asignar un valor numérico específico
+    let deudas = Number; // Aquí deberías asignar un valor numérico específico
+
+4️⃣ Calcula e imprime las siguientes variables a partir de las variables del ejemplo anterior:
+    Nombre completo (nombre y apellido)
+    let nombre = "String";
+    let apellido = "String User";
+
+    // Cálculo del nombre completo
+    let nombreCompleto = nombre + " " + apellido;
+
+    // Impresión del nombre completo
+    console.log("Nombre completo: " + nombreCompleto);
+
+    Dinero real (dinero ahorrado menos deudas)
+    // Declaración de variables
+    let dineroAhorrado = 5000; // Aquí deberías asignar un valor numérico específico
+    let deudas = 2000; // Aquí deberías asignar un valor numérico específico
+    
+    // Cálculo del balance (dinero ahorrado menos deudas)
+    let balance = dineroAhorrado - deudas;
+    
+    // Cálculo de si tienes dinero suficiente para saldar las deudas
+    let saldoSuficiente = balance >= 0;
+    
+    // Impresión de los resultados
+    console.log("Dinero ahorrado: $" + dineroAhorrado);
+    console.log("Deudas: $" + deudas);
+    console.log("Balance: $" + balance);
+    console.log("¿Saldo suficiente para saldar las deudas?: " + saldoSuficiente);
+
+Funciones
+1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+
+    ¿Qué es una función?
+    En programación, una función es un bloque de código que realiza una tarea específica 
+    y puede ser reutilizado en diferentes partes de un programa. Las funciones permiten 
+    dividir un programa en partes más pequeñas y manejables, lo que facilita la comprensión,
+    el mantenimiento y la organización del código.
+
+    Las funciones en programación generalmente tienen tres partes principales:
+
+    Declaración o definición:
+    En esta parte, se especifica el nombre de la función y se detalla qué acciones realizará
+    cuando sea llamada. Se define utilizando la palabra clave correspondiente del lenguaje
+    de programación (por ejemplo, function en JavaScript).
+
+    javascript
+
+    function suma(a, b) {
+        return a + b;
+    }
+
+    Parámetros:
+
+    Son variables que se utilizan como entrada para la función. Los parámetros son opcionales y
+     permiten que la función acepte diferentes valores al ser llamada.
+
+    javascript
+
+    function saludar(nombre) {
+        console.log("¡Hola, " + nombre + "!");
+    }
+
+    Cuerpo de la función:
+
+    Contiene el conjunto de instrucciones que se ejecutarán cuando la función sea llamada. Puede incluir 
+    declaraciones, operaciones, estructuras de control, etc.
+
+    javascript
+
+    function cuadrado(numero) {
+        return numero * numero;
+    }
+
+    Una vez que se ha definido una función, puedes llamarla desde cualquier parte del programa para ejecutar
+     el código que contiene. Las funciones proporcionan modularidad al código, ya que puedes encapsular lógica 
+     específica y luego utilizarla según sea necesario.
+
+    Ejemplo de llamada a funciones:
+
+    javascript
+
+    let resultadoSuma = suma(3, 5); // Llamada a la función suma
+    saludar("Adrian"); // Llamada a la función saludar
+    let resultadoCuadrado = cuadrado(4); // Llamada a la función cuadrado
+
+    En este ejemplo, se están llamando a diferentes funciones con diferentes propósitos.
+    La función suma realiza una suma, la función saludar imprime un saludo, y la función
+    cuadrado calcula el cuadrado de un número.
+
+    Las funciones son fundamentales para el desarrollo de software, ya que promueven la 
+    reutilización del código y facilitan la comprensión y mantenimiento del programa.
+
+    ¿Cuándo me sirve usar una función en mi código?
+    Usar funciones en tu código proporciona varios beneficios y es una práctica fundamental en programación.
+    Aquí algunos escenarios en los que te será útil utilizar funciones:
+
+    Reutilización de Código:
+        Las funciones permiten encapsular un conjunto de instrucciones y luego reutilizar ese código en 
+        diferentes partes de tu programa. Esto evita la duplicación de código y facilita la gestión y 
+        mantenimiento de tu código.
+
+    Modularidad:
+        Las funciones ayudan a dividir un programa en módulos más pequeños y manejables. Cada función 
+        puede encargarse de una tarea específica, lo que facilita la comprensión y el mantenimiento del código.
+
+    Abstracción:
+        Al utilizar funciones, puedes abstraer detalles complejos detrás de una interfaz simple. Esto hace que
+        tu código sea más legible y fácil de entender para otros desarrolladores y para ti mismo en el futuro.
+
+    Organización:
+        Las funciones proporcionan una forma de organizar tu código de manera más estructurada. Puedes agrupar
+        funciones relacionadas en módulos o clases, facilitando la navegación y la comprensión del código.
+
+    Facilita el Testing:
+        Las funciones bien diseñadas facilitan la prueba de unidades. Puedes probar cada función de forma 
+        independiente para asegurarte de que funcione correctamente antes de integrarla en el resto del programa.
+
+    Manejo de Eventos:
+        En entornos de desarrollo web, las funciones son esenciales para manejar eventos del usuario, como clics 
+        de ratón o pulsaciones de teclas. Cada función puede representar una acción específica en respuesta a un 
+        evento.
+
+    Parámetros y Flexibilidad:
+        Las funciones pueden aceptar parámetros, lo que les permite adaptarse a diferentes situaciones. Esto aumenta
+        la flexibilidad de tu código, ya que puedes reutilizar la misma función con diferentes datos de entrada.
+
+    Claridad y Legibilidad:
+        Al utilizar funciones con nombres descriptivos, tu código se vuelve más legible y expresivo. Las funciones
+        actúan como bloques de construcción que describen acciones específicas, haciendo que el flujo del programa 
+        sea más comprensible.
+
+    En resumen, usar funciones es esencial para escribir código limpio, mantenible y eficiente. Proporcionan una 
+    manera de estructurar y organizar tu código, promoviendo la reutilización y la modularidad. A medida que tu
+    programa crece en complejidad, el uso de funciones se vuelve aún más crucial para mantener un código manejable
+    y comprensible.
+
+    ¿Cuál es la diferencia entre parámetros y argumentos de una función?
+    Los términos "parámetros" y "argumentos" se utilizan en el contexto de funciones, pero se refieren a conceptos
+    distintos:
+
+    Parámetros:
+    Los parámetros son variables que se declaran en la firma de una función. Son nombres de variables que actúan 
+    como marcadores de posición para los valores que se pasarán a la función cuando sea llamada. Los parámetros se 
+    definen en la declaración de la función y son utilizados internamente en el cuerpo de la función.
+
+    Ejemplo:
+
+    javascript
+
+    function sumar(a, b) {
+        // 'a' y 'b' son parámetros
+        return a + b;
+    }
+
+    En este ejemplo, a y b son parámetros de la función sumar.
+
+    Argumentos:
+
+    Los argumentos son los valores reales que se pasan a una función cuando esta es llamada. Los argumentos son los 
+    datos que ocupan los lugares de los parámetros en la llamada a la función. Pueden ser constantes, variables, 
+    expresiones o cualquier combinación de estos.
+
+    Ejemplo:
+
+    javascript
+
+    let resultado = sumar(3, 5);
+
+    En este caso, 3 y 5 son los argumentos que se pasan a la función sumar.
+
+    En resumen, los parámetros son variables que se declaran en la definición de la función, mientras que los argumentos
+    son los valores reales que se pasan a la función cuando se llama. Los argumentos toman los lugares de los parámetros,
+    y la cantidad de argumentos y su orden deben coincidir con los parámetros de la función para que la llamada sea correcta.
+
+
+2️⃣ Convierte el siguiente código en una función, pero, cambiando cuando sea necesario las variables constantes
+    por parámetros y argumentos en una función:
+
+    const name = "Juan David";
+    const lastname = "Castro Gallego";
+    const completeName = name + lastname;
+    const nickname = "juandc";
+
+    console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + ".");
+
+    function generarMensaje(name, lastname, nickname) {
+        const CompleteName = name + " " + lastname;
+        console.log("Mi name es " + lastname + ", pero prefiero que me digas " + nickname + ".");
+    }
+
+    // Llamada a la función con valores específicos;
+    Mi nombre es Juan DavidCastro Gallego, pero prefiero que me digas juandc.
+
+Condicionales
+1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+
+    ¿Qué es un condicional?
+    Un condicional, en programación, es una estructura que permite tomar decisiones basadas en condiciones
+    específicas. Estos condicionales permiten que un programa ejecute diferentes bloques de código dependiendo 
+    de si ciertas condiciones son verdaderas o falsas.
+
+    La estructura más común de un condicional es la declaración "if" (si) junto con sus variantes "else if" 
+    (si no, si) y "else" (si no). Aquí hay un ejemplo en JavaScript:
+
+    javascript
+
+    let edad = 20;
+
+    if (edad >= 18) {
+        console.log("Eres mayor de edad.");
+    } else {
+        console.log("Eres menor de edad.");
+    }
+
+    En este ejemplo, el programa evalúa la condición (edad >= 18). Si la condición es verdadera, se ejecuta el
+    bloque de código dentro del primer conjunto de llaves (el bloque "if"). Si la condición es falsa, se ejecuta
+    el bloque de código dentro del conjunto de llaves de "else".
+
+    Además del "if" básico, puedes utilizar "else if" para agregar más condiciones a tu estructura condicional:
+
+    javascript
+
+    let hora = 14;
+
+    if (hora < 12) {
+        console.log("Buenos días.");
+    } else if (hora < 18) {
+        console.log("Buenas tardes.");
+    } else {
+        console.log("Buenas noches.");
+    }
+
+    En este ejemplo, se evalúan tres condiciones diferentes y se ejecuta el bloque de código correspondiente al 
+    resultado de la primera condición verdadera.
+
+    Los condicionales son fundamentales en la programación porque permiten que un programa tome decisiones 
+    dinámicamente en función de las circunstancias actuales. Pueden controlar el flujo de ejecución del programa 
+    y mejorar la flexibilidad y la capacidad de respuesta del código.
+
+        
+    ¿Qué tipos de condicionales existen en JavaScript y cuáles son sus diferencias?
+    En JavaScript, existen varios tipos de condicionales que permiten tomar decisiones en función de diferentes circunstancias. 
+    Aquí están los principales tipos de condicionales y sus diferencias:
+
+    if (si):
+        Este es el condicional más básico. Se utiliza para ejecutar un bloque de código si la condición proporcionada es verdadera.
+
+    javascript
+
+    if (condicion) {
+    // Bloque de código si la condición es verdadera
+    }
+
+    if-else (si no):
+
+    Se utiliza para ejecutar un bloque de código si la condición es verdadera y otro bloque si la condición es falsa.
+
+    javascript
+
+    if (condicion) {
+            // Bloque de código si la condición es verdadera
+    } else {
+            // Bloque de código si la condición es falsa
+     }
+
+    if-else if-else (si no, si no):
+
+    Permite evaluar varias condiciones en secuencia. El bloque de código del primer if o else if cuya condición sea 
+    verdadera será ejecutado.
+
+    javascript
+
+    if (condicion1) {
+            // Bloque de código si condicion1 es verdadera
+    } else if (condicion2) {
+            // Bloque de código si condicion2 es verdadera
+    } else {
+            // Bloque de código si ninguna condición es verdadera
+    }
+
+     Operador Ternario (?):
+
+    Es una forma concisa de escribir un condicional en una sola línea. Se utiliza para asignar un valor a una variable
+    en función de una condición.
+
+    javascript
+
+    let resultado = (condicion) ? valorSiTrue : valorSiFalse;
+
+    Switch:
+
+    Permite evaluar una expresión contra múltiples casos. Es útil cuando se tienen varias condiciones a comprobar y se 
+    necesita ejecutar un bloque de código específico para cada caso.
+
+    javascript
+
+    switch (expresion) {
+    case valor1:
+         // Bloque de código para valor1
+     break;
+    case valor2:
+        // Bloque de código para valor2
+    break;
+    default:
+        // Bloque de código si ningún caso coincide
+     }
+
+    Estos condicionales proporcionan flexibilidad para controlar el flujo de ejecución del programa en función de
+     diversas circunstancias. La elección del condicional adecuado depende de la lógica específica que estés 
+     implementando.
+
+    ¿Puedo combinar funciones y condicionales?
+    ¡Claro que sí! Puedes combinar funciones y condicionales en muchos lenguajes de programación para crear
+    programas más complejos y flexibles. Por ejemplo, en Python, puedes definir funciones y luego utilizar
+    condicionales dentro de esas funciones para controlar el flujo del programa y tomar decisiones basadas 
+    en ciertas condiciones.
+
+
+2️⃣ Replica el comportamiento del siguiente código que usa la sentencia switch utilizando if, else y else if:
+
+    const tipoDeSuscripcion = "Basic";
+
+    switch (tipoDeSuscripcion) {
+    case "Free":
+        console.log("Solo puedes tomar los cursos gratis");
+        break;
+    case "Basic":
+        console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+        break;
+    case "Expert":
+        console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+        break;
+    case "ExpertPlus":
+        console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+        break;
+    }
+
+    if (tipoDeSuscripcion === "Free") {
+        console.log("Solo puedes tomar los cursos gratis");
+    } else if (tipoDeSuscripcion === "Basic") {
+        console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+    } else if (tipoDeSuscripcion === "Expert") {
+        console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    } else if (tipoDeSuscripcion === "ExpertPlus") {
+        console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+    } else {
+        console.log("Tipo de suscripción no reconocido");
+    }
+
+ 3️⃣ Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if
+    (sin else ni else if).
+
+    const tipoDeSuscripcion = "Basic";
+
+    if (tipoDeSuscripcion === "Free") {
+        console.log("Solo puedes tomar los cursos gratis");
+    }
+
+    if (tipoDeSuscripcion === "Basic") {
+        console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+    }
+
+    if (tipoDeSuscripcion === "Expert") {
+        console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+    }
+
+    if (tipoDeSuscripcion === "ExpertPlus") {
+        console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+    }
+
+    if (
+        tipoDeSuscripcion !== "Free" &&
+        tipoDeSuscripcion !== "Basic" &&
+        tipoDeSuscripcion !== "Expert" &&
+        tipoDeSuscripcion !== "ExpertPlus"
+    ) {
+        console.log("Tipo de suscripción no reconocido");
+    }
+
+            💡 Bonus: si ya eres una experta o experto en el lenguaje, te desafío a comentar cómo replicar este 
+            comportamiento con arrays u objetos y un solo condicional. 😏
+
+Ciclos
+1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+
+    ¿Qué es un ciclo?
+    En programación, un ciclo (también llamado bucle o loop) es una estructura que permite ejecutar repetidamente un
+    bloque de código mientras se cumpla una condición específica. Los ciclos son fundamentales para la automatización 
+    de tareas repetitivas y para iterar sobre colecciones de datos.
+
+    Existen diferentes tipos de ciclos en la mayoría de los lenguajes de programación. Los tres tipos principales son:
+
+        Ciclo for:
+            Utilizado para iterar un número específico de veces. La sintaxis típica incluye una inicialización, una 
+            condición de continuación y una expresión de incremento o decremento.
+
+        javascript
+
+    for (let i = 0; i < 5; i++) {
+        // Bloque de código a repetir
+        console.log(i);
+    }
+
+    En este ejemplo, el ciclo for imprimirá los números del 0 al 4.
+
+    Ciclo while:
+
+        Utilizado cuando no se conoce de antemano cuántas veces se ejecutará el ciclo. La condición se verifica antes 
+        de ejecutar el bloque de código.
+
+    javascript
+
+    let contador = 0;
+
+    while (contador < 5) {
+        // Bloque de código a repetir
+        console.log(contador);
+        contador++;
+    }
+
+    En este ejemplo, el ciclo while imprimirá los números del 0 al 4.
+
+    Ciclo do-while:
+
+        Similar al while, pero la condición se verifica después de ejecutar el bloque de código. Garantiza que el bloque
+        se ejecutará al menos una vez.
+
+    javascript
+
+        let contador = 0;
+
+        do {
+            // Bloque de código a repetir
+            console.log(contador);
+            contador++;
+        } while (contador < 5);
+
+        En este ejemplo, el ciclo do-while también imprimirá los números del 0 al 4.
+
+    Estos ciclos permiten automatizar tareas repetitivas, como recorrer elementos de un array, procesar datos en lotes,
+    o realizar operaciones mientras se cumpla una condición específica. La elección del tipo de ciclo depende de la lógica 
+    y los requisitos específicos de tu programa.
+
+
+    ¿Qué tipos de ciclos existen en JavaScript?
+    En JavaScript, existen varios tipos de ciclos que permiten la repetición de bloques de código. Los principales ciclos son:
+
+    for:
+    Se utiliza para iterar un número específico de veces. La sintaxis típica incluye una inicialización, una condición de 
+    continuación y una expresión de incremento o decremento.
+
+    javascript
+
+    for (let i = 0; i < 5; i++) {
+        // Bloque de código a repetir
+        console.log(i);
+    }
+
+    while:
+
+    Se utiliza cuando no se conoce de antemano cuántas veces se ejecutará el ciclo. La condición se verifica antes de
+    ejecutar el bloque de código.
+
+    javascript
+
+    let contador = 0;
+
+    while (contador < 5) {
+        // Bloque de código a repetir
+        console.log(contador);
+        contador++;
+    }
+
+    do-while:
+
+    Similar al while, pero la condición se verifica después de ejecutar el bloque de código. Garantiza que el bloque 
+    se ejecutará al menos una vez.
+
+    javascript
+
+    let contador = 0;
+
+    do {
+        // Bloque de código a repetir
+        console.log(contador);
+        contador++;
+    } while (contador < 5);
+
+    for...in:
+
+    Utilizado para recorrer las propiedades de un objeto. Itera sobre las claves (o índices) del objeto.
+
+    javascript
+
+    const persona = { nombre: 'Juan', edad: 25 };
+
+    for (let clave in persona) {
+        // Bloque de código a repetir
+        console.log(clave + ': ' + persona[clave]);
+    }
+
+    for...of:
+
+    Introducido en ECMAScript 6 (ES6), se utiliza para iterar sobre elementos iterables como arrays y cadenas de texto.
+
+    javascript
+
+    const numeros = [1, 2, 3, 4, 5];
+
+    for (let numero of numeros) {
+        // Bloque de código a repetir
+        console.log(numero);
+    }
+
+    forEach:
+
+    Método de array que ejecuta una función proporcionada una vez por cada elemento del array.
+
+    javascript
+
+    const numeros = [1, 2, 3, 4, 5];
+
+    numeros.forEach(function(numero) {
+        // Bloque de código a repetir
+        console.log(numero);
+    });
+
+    ¿Qué es un ciclo infinito y por qué es un problema?
+    Un ciclo infinito es una estructura en un programa de computadora que se ejecuta continuamente sin 
+    llegar a una condición de finalización. En otras palabras, es un bucle que nunca se detiene de forma natural.
+
+    Por ejemplo, un ciclo while que siempre tiene una condición verdadera:
+
+    javascript
+
+    while (true) {
+        // Bloque de código a repetir
+    }
+
+    O un ciclo for sin una condición de terminación:
+
+    javascript
+
+    for (;;) {
+        // Bloque de código a repetir
+    }
+
+    Los ciclos infinitos son un problema porque provocan que el programa se ejecute indefinidamente, lo cual
+    puede tener consecuencias negativas como:
+
+        Consumo de Recursos:
+            Un ciclo infinito consume recursos de la computadora, como la CPU, de manera constante. Esto puede 
+            hacer que el sistema se vuelva lento y no responda, afectando el rendimiento general de la máquina.
+
+        Bloqueo del Programa:
+            Al ejecutarse sin cesar, un ciclo infinito puede bloquear el flujo normal del programa. Esto impide
+            que otras partes del código se ejecuten y puede llevar a un comportamiento no deseado o a la 
+            interrupción del programa.
+
+        Fallas en el Sistema:
+            En situaciones extremas, un ciclo infinito que consume recursos de manera intensiva puede llevar a 
+            fallos en el sistema operativo, ya que otros procesos pueden no tener acceso a los recursos necesarios.
+
+        Agotamiento de Recursos:
+            En entornos en red, un ciclo infinito puede generar una cantidad significativa de tráfico de red 
+            innecesario, agotando los recursos de la red y afectando el rendimiento general.
+
+    Evitar ciclos infinitos es crucial para escribir código robusto y eficiente. Se deben establecer condiciones
+     de finalización adecuadas en los bucles para que el programa pueda avanzar y completar sus tareas sin quedar 
+     atrapado en un bucle interminable. Al escribir código, es importante revisar y verificar que todas las estructuras 
+     de bucles tengan una condición de terminación que eventualmente se cumpla.
+
+    ¿Puedo mezclar ciclos y condicionales?
+    Sí, es común mezclar ciclos y condicionales en programación para crear lógica más compleja y adaptativa. Puedes 
+    tener estructuras de control de flujo condicionales dentro de bucles y viceversa. Esta combinación es fundamental 
+    para implementar comportamientos más sofisticados en tus programas.
+
+Aquí hay un ejemplo simple en JavaScript que utiliza un bucle for con una estructura condicional if:
+
+javascript
+
+for (let i = 1; i <= 10; i++) {
+    if (i % 2 === 0) {
+        console.log(i + " es un número par");
+    } else {
+        console.log(i + " es un número impar");
+    }
+}
+
+En este ejemplo, se utiliza un bucle for para iterar del 1 al 10. Dentro del bucle, hay una estructura condicional if 
+que verifica si el número actual (i) es par o impar y muestra un mensaje en consecuencia.
+
+También puedes tener bucles dentro de condicionales. Aquí hay un ejemplo de un bucle while dentro de un condicional if:
+
+javascript
+
+let contador = 0;
+
+if (contador < 5) {
+    while (contador < 5) {
+        console.log("Iteración " + contador);
+        contador++;
+    }
+} else {
+    console.log("El contador ya es mayor o igual a 5");
+}
+
+En este caso, el programa verifica si el contador es menor que 5 usando un condicional if. Si la condición es 
+verdadera, se ejecuta un bucle while dentro del bloque de código del condicional.
+
+Mezclar ciclos y condicionales te brinda la flexibilidad para controlar el flujo de ejecución de tu programa de 
+manera más dinámica y responder a diferentes situaciones. Es una práctica común y poderosa en programación.
+
+2️⃣ Replica el comportamiento de los siguientes ciclos for utilizando ciclos while:
+
+for (let i = 0; i < 5; i++) {
+    console.log("El valor de i es: " + i);
+}
+
+for (let i = 10; i >= 2; i--) {
+    console.log("El valor de i es: " + i);
+}
+
+// Puedes replicar el comportamiento de los ciclos for utilizando ciclos while. Aquí tienes las versiones 
+equivalentes utilizando while:
+
+Replicando el primer ciclo for:
+
+javascript
+
+let i = 0;
+
+while (i < 5) {
+console.log("El valor de i es: " + i);
+i++;
+}
+
+Replicando el segundo ciclo for:
+
+javascript
+
+let i = 10;
+
+while (i >= 2) {
+console.log("El valor de i es: " + i);
+i--;
+}
+
+En ambos casos, se ha inicializado la variable i fuera del bucle y se ha utilizado un bucle while con la 
+condición equivalente a la del ciclo for. Dentro del bucle while, se ejecuta el mismo bloque de código que
+en los ciclos for, y se actualiza la variable i de acuerdo con la expresión de incremento o decremento.
+
+
+3️⃣ Escribe un código en JavaScript que le pregunte a los usuarios cuánto es 2 + 2. Si responden bien, 
+mostramos un mensaje de felicitaciones, pero si responden mal, volvemos a empezar.
+
+    💡 Pista: puedes usar la función prompt de JavaScript.
+
+
+    //Aquí tienes un ejemplo de código en JavaScript que utiliza la función prompt para preguntar a los usuarios 
+    cuánto es 2 + 2 y proporciona un mensaje de felicitaciones si la respuesta es correcta. Si la respuesta es 
+    incorrecta, el código seguirá preguntando hasta que se dé la respuesta correcta:
+
+    javascript
+    
+    let respuestaUsuario;
+    
+    do {
+        respuestaUsuario = prompt("¿Cuánto es 2 + 2?");
+        
+        if (respuestaUsuario == 4) {
+            alert("¡Correcto! ¡Felicitaciones!");
+        } else {
+            alert("Incorrecto. Vuelve a intentarlo.");
+        }
+    
+    } while (respuestaUsuario != 4);
+
+Listas
+1️⃣ Responde las siguientes preguntas en la sección de comentarios:
+
+    ¿Qué es un array?
+    Un array, también conocido como arreglo o matriz, es una estructura de datos que permite almacenar y organizar 
+    elementos de manera secuencial bajo un mismo nombre. Cada elemento en un array tiene un índice que representa
+    su posición, comenzando desde cero para el primer elemento.
+
+En programación, los arrays son utilizados para manejar colecciones de datos del mismo tipo. Pueden contener 
+elementos como números, cadenas de texto, objetos u otros arrays. La capacidad de acceder a los elementos por su 
+índice y la posibilidad de iterar sobre ellos hace que los arrays sean una herramienta fundamental en la programación.
+
+    ¿Qué es un objeto?
+    en programación, un objeto es una estructura de datos que agrupa propiedades y métodos relacionados. Las propiedades 
+    son variables que almacenan datos, y los métodos son funciones que realizan acciones asociadas con el objeto. Los
+    objetos permiten modelar entidades del mundo real de manera más cercana a cómo las percibimos.
+
+En muchos lenguajes de programación, como JavaScript, Python y Java, los objetos son una parte fundamental de la
+ programación orientada a objetos (OOP). 
+
+    ¿Cuándo es mejor usar objetos o arrays?
+    La elección entre usar objetos o arrays en programación depende de la naturaleza de los datos y de los requisitos específicos de tu aplicación. Ambas estructuras tienen propósitos diferentes y se utilizan en situaciones distintas. Aquí hay algunas consideraciones para ayudarte a decidir cuándo es mejor usar objetos o arrays:
+
+Usa Objetos Cuando:
+
+    Tienes Datos con Nombres Clave:
+        Los objetos son ideales cuando los datos que estás manejando tienen nombres clave (propiedades) asociados a ellos. Por ejemplo, información sobre una persona con propiedades como nombre, edad y ocupacion.
+
+    javascript
+
+let persona = {
+    nombre: "Juan",
+    edad: 30,
+    ocupacion: "Desarrollador"
+};
+
+Necesitas Métodos o Funcionalidades Asociadas:
+
+    Si necesitas agrupar datos con métodos o funciones asociadas, los objetos son la elección correcta. Puedes encapsular funciones dentro de un objeto para que estén relacionadas lógicamente.
+
+javascript
+
+let coche = {
+    marca: "Toyota",
+    modelo: "Camry",
+    arrancar: function() {
+        console.log("Arrancando el coche " + this.modelo);
+    }
+};
+
+coche.arrancar(); // Imprime: Arrancando el coche Camry
+
+Cuando Necesitas Propiedades Dinámicas:
+
+    Los objetos permiten agregar o eliminar propiedades dinámicamente. Esto es útil si necesitas manejar datos con estructuras flexibles.
+
+javascript
+
+    let persona = {
+        nombre: "Juan",
+        edad: 30
+    };
+
+    // Agregar una nueva propiedad dinámicamente
+    persona.ocupacion = "Desarrollador";
+
+Usa Arrays Cuando:
+
+    Necesitas una Colección Ordenada de Elementos:
+        Los arrays son ideales cuando trabajas con una colección de elementos ordenada numéricamente. Los elementos tienen índices que 
+        indican su posición en el array.
+
+    javascript
+
+let frutas = ["Manzana", "Banana", "Uva"];
+
+Cuando Necesitas Iterar sobre Elementos:
+
+    Si planeas realizar operaciones en cada elemento de manera iterativa, los arrays son más convenientes. Puedes utilizar bucles para 
+    recorrer los elementos fácilmente.
+
+javascript
+
+for (let i = 0; i < frutas.length; i++) {
+    console.log(frutas[i]);
+}
+
+Cuando los Datos Son Homogéneos:
+
+    Si tus datos son del mismo tipo y tienen una estructura uniforme, un array puede ser más adecuado. Por ejemplo, una lista de números
+    o cadenas de texto.
+
+javascript
+
+    let numeros = [1, 2, 3, 4, 5];
+
+En muchos casos, puedes combinar objetos y arrays según sea necesario para satisfacer los requisitos específicos de tu aplicación.
+ La elección entre objetos y arrays
+ dependerá de la organización lógica y la manipulación de los datos en tu código.
+
+    ¿Puedo mezclar arrays con objetos o incluso objetos con arrays?
+    Sí, puedes mezclar arrays con objetos en programación, y a menudo es útil hacerlo para representar datos más complejos y estructurados. Aquí hay algunas formas en las que puedes mezclar arrays y objetos:
+
+    Arrays de Objetos:
+        Puedes tener un array donde cada elemento es un objeto. Esto es especialmente útil cuando necesitas manejar una colección de elementos, y cada elemento tiene múltiples propiedades.
+
+    javascript
+
+let personas = [
+    { nombre: "Juan", edad: 30 },
+    { nombre: "María", edad: 25 },
+    { nombre: "Carlos", edad: 35 }
+];
+
+Puedes acceder a los elementos del array y a las propiedades de cada objeto utilizando la notación de corchetes y puntos:
+
+javascript
+
+console.log(personas[0].nombre); // Imprime: Juan
+
+Objetos con Propiedades que Son Arrays:
+
+    Puedes tener un objeto donde algunas propiedades son arrays. Esto es útil cuando necesitas organizar información de manera más estructurada.
+
+javascript
+
+let equipo = {
+    nombre: "Equipo A",
+    miembros: ["Juan", "María", "Carlos"],
+    proyectos: ["Proyecto 1", "Proyecto 2"]
+};
+
+Puedes acceder a las propiedades del objeto y a los elementos de los arrays asociados:
+
+javascript
+
+console.log(equipo.miembros[0]); // Imprime: Juan
+
+Arrays de Arrays (Matrices):
+
+    Puedes tener un array donde cada elemento es otro array. Esto se conoce como una matriz y es útil cuando necesitas representar datos bidimensionales.
+
+javascript
+
+let matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+Puedes acceder a los elementos de la matriz utilizando la notación de corchetes dos veces:
+
+javascript
+
+    console.log(matriz[1][2]); // Imprime: 6
+
+Mezclar arrays con objetos te brinda flexibilidad para modelar datos de manera más compleja y 
+estructurada en tu programa. La elección de cómo organizar
+ tus datos dependerá de los requisitos específicos de tu aplicación y de cómo planeas acceder y 
+ manipular la información.
+
+2️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima su primer elemento.
+
+var alfabeto = ["A", "B", "C", "D"];
+console.log (alfabeto);
+console.log (alfabeto [0]);
+
+var alfabeto = ["A", "B", "C", "D"];
+console.log (alfabeto);
+Array(4) [ "A", "B", "C", "D" ]
+undefined
+
+console.log (alfabeto [0]);
+A 
+undefine
+
+3️⃣ Crea una función que pueda recibir cualquier array como parámetro e imprima todos sus elementos uno por uno
+ (no se vale imprimir el array completo).
+ Puedes crear una función en JavaScript que acepte cualquier array como parámetro y luego imprima cada uno de sus elementos uno por uno. Aquí tienes un ejemplo de cómo podrías hacerlo:
+
+javascript
+
+function imprimirElementosArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+}
+
+// Ejemplo de uso
+let frutas = ["Manzana", "Banana", "Uva"];
+imprimirElementosArray(frutas);
+
+Manzana 
+Banana 
+Uva 
+undefined
+
+function imprimirElementosArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+}
+
+​let numeros = [1, 2, 3, 4, 5];
+imprimirElementosArray(numeros);
+
+1 
+2 
+3 
+4 
+5 
+undefined 
+
+En este ejemplo, la función imprimirElementosArray acepta un array como parámetro (arr) y utiliza un bucle
+for para recorrer cada elemento del array. Dentro del bucle, se utiliza console.log para imprimir cada elemento
+por separado.
+
+Puedes llamar a esta función con cualquier array que desees imprimir, ya sea de strings, números u otros tipos
+de datos. La función funcionará de manera similar independientemente del contenido del array.
+
+4️⃣ Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno 
+(no se vale imprimir el objeto completo).
+
+Puedes crear una función en JavaScript que acepte cualquier objeto como parámetro y luego imprima cada una de sus
+propiedades uno por uno. Aquí tienes un ejemplo de cómo podrías hacerlo:
+
+javascript
+
+function imprimirPropiedadesObjeto(obj) {
+    for (let clave in obj) {
+        if (obj.hasOwnProperty(clave)) {
+            console.log(clave + ": " + obj[clave]);
+        }
+    }
+}
+
+// Ejemplo de uso
+let persona = {
+    nombre: "Juan",
+    edad: 30,
+    ocupacion: "Desarrollador"
+};
+
+imprimirPropiedadesObjeto(persona);
+
+let coche = {
+    marca: "Toyota",
+    modelo: "Camry",
+    año: 2022
+};
+
+imprimirPropiedadesObjeto(coche);
+
+En este ejemplo, la función imprimirPropiedadesObjeto acepta un objeto como parámetro (obj) y utiliza un bucle
+for...in para iterar sobre todas las claves (propiedades) del objeto. Dentro del bucle, se utiliza console.log 
+para imprimir cada propiedad junto con su valor.
+
+Es importante verificar obj.hasOwnProperty(clave) para asegurarse de imprimir solo las propiedades directas del
+objeto y no aquellas heredadas de su prototipo.
+
+Puedes llamar a esta función con cualquier objeto que desees imprimir, y la función imprimirá cada propiedad con
+ su respectivo valor.
